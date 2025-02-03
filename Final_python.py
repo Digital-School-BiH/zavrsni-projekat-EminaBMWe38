@@ -6,12 +6,12 @@ import random
 
 
 def validate_login():
-    username = username_entry.get()
-    password = password_entry.get()
-    user_type = user_type_var.get()
-    if user_type == "Teacher" and username == "teacher" and password == "password123":
+    username=username_entry.get()
+    password=password_entry.get()
+    user_type =user_type_var.get()
+    if user_type== "Teacher" and username =="teacher" and password=="password123":
         open_classroom(user_type)
-    elif user_type == "Student" and username == "student" and password == "password123":
+    elif user_type=="Student" and username=="student" and password=="password123":
         open_classroom(user_type)
     else:
         messagebox.showerror("Login Failed", "Invalid username or password!")
@@ -22,7 +22,7 @@ def open_classroom(user_type):
     login_window.destroy()
     classroom_window = tk.Tk()
     classroom_window.title("Google Classroom")
-    classroom_window.geometry("800x600")
+    classroom_window.geometry("1920x1200")
 
     def sign_out():
         classroom_window.destroy()
@@ -79,7 +79,7 @@ def open_classroom(user_type):
     login_window.destroy()
     classroom_window = tk.Tk()
     classroom_window.title("Google Classroom")
-    classroom_window.geometry("800x600")
+    classroom_window.geometry("1920x1200")
 
     def sign_out():
         classroom_window.destroy()
@@ -89,7 +89,7 @@ def open_classroom(user_type):
         classroom_window.withdraw()
         show_games(classroom_window)
 
-    menu_bar = Menu(classroom_window)
+    menu_bar=Menu(classroom_window)
     classroom_window.config(menu=menu_bar)
     classroom_window.configure(bg="#cdd6f4")
 
@@ -131,7 +131,7 @@ def open_classroom(user_type):
     def open_class_window(class_info):
         class_window=tk.Toplevel(classroom_window)
         class_window.title(class_info["title"])
-        class_window.geometry("400x400")
+        class_window.geometry("1920x1200")
 
         class_title_label= tk.Label(
             class_window,
